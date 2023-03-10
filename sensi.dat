@@ -1,0 +1,63 @@
+param: FACTORY: production :=
+Brockton	160
+Haverhill	130
+Plymouth	140 ;
+
+param: WAREHOUSE: supply := 
+Worcester	140
+Lynn	90
+Lawrence	80
+Newton	120 ;
+
+param: CITY: demand := 
+Boston	63
+Brookline	21
+Cambridge	46
+Framingham	25
+Lowell	32
+Malden	25
+Medford	18
+Quincy	28
+Somerville	25
+Waltham	21 ;
+
+param distance1:
+Worcester	Lynn	Lawrence	Newton :=
+Brockton	97	35	54	25
+Haverhill	59	37	9	41
+Plymouth	83	52	67	39 ;
+
+param distance2:
+Boston	Brookline	Cambridge	Framingham	Lowell	Malden	Medford	Quincy	Somerville	Waltham :=
+Lawrence	34	34	88	44	16	25	27	95	38	38
+Lynn	13	17	101	33	31	7	18	99	50	50
+Newton	10	9	95	25	36	13	14	91	42	42
+Worcester	85	80	11	63	82	91	84	6	62	62 ;
+
+param cost1:
+	Lawrence	Lynn	Newton	Worcester :=
+Brockton	3.3	2.2	1.1	4.4
+Haverhill	1.1	3.3	2.2	3.3
+Plymouth	3.3	3.3	2.2	4.4 ;
+
+param cost2:
+	Boston	Brookline	Cambridge	Framingham	Lowell	Malden	Medford	Quincy	Somerville	Waltham :=
+Lawrence	2.2	2.2	4.4	2.2	1.1	1.1	2.2	4.4	2.2	2.2
+Lynn	1.1	1.1	4.4	2.2	2.2	1.1	1.1	4.4	2.2	2.2
+Newton	1.1	1.1	4.4	1.1	2.2	1.1	1.1	4.4	2.2	2.2
+Worcester	4.4	4.4	1.1	3.3	4.4	4.4	4.4	1.1	3.3	3.3 ;
+
+
+param install:
+Boston	Brookline	Cambridge	Framingham	Lowell	Malden	Medford	Quincy	Somerville	Waltham :=
+Lawrence	2200	1100	4180	1210	715	605	990	3300	1540	1320
+Lynn	1100	550	4180	1210	1430	605	495	3300	1540	1320
+Newton	1100	550	4180	605	1430	605	495	3300	1540	1320
+Worcester	4400	2200	1045	1815	2860	2420	1980	825	2310	1980 ;
+
+param maintain:
+Boston	Brookline	Cambridge	Framingham	Lowell	Malden	Medford	Quincy	Somerville	Waltham := 
+Lawrence	400	200	760	220	130	110	180	600	280	240
+Lynn	200	100	760	220	260	110	90	600	280	240
+Newton	200	100	760	110	260	110	90	600	280	240
+Worcester	800	400	190	330	520	440	360	150	420	360 ;

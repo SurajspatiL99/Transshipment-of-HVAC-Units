@@ -1,0 +1,17 @@
+#reset AMPL
+reset;
+
+#load the model
+model Prelim.mod;
+
+#load the data
+data Prelim.dat;
+
+#set the solver
+option solver cplex;
+
+#solve the problem
+solve;
+
+#display results
+display From_warehouse_to_city;
